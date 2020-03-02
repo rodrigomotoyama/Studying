@@ -51,3 +51,15 @@ bp
 bp + scale_fill_discrete(breaks=c("trt1", "trt2", "ctrl"))
 bp + scale_fill_discrete(breaks=c("trt1", "trt2", "ctrl"))
 bp + theme(legend.position=c(0.9, 0.2))
+
+
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy, size = drv))
+ggplot(data = mtcars) +
+  geom_point(mapping = aes(mpg, qsec, color = disp) )+
+  theme(legend.title = element_text("Cilindradas")) +
+  labs(x = "milhas/galão", y = "segundos")
+
+
+ggplot(data = mtcars) +
+  geom_point(mapping = aes(vs, mpg))
